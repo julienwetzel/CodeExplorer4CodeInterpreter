@@ -63,7 +63,8 @@ In the ChatGPT prompt, add the following text:
 ```
 All the contents of the project files are in the attached python file.
 Import the file with /mnt/data/ce4ci_dict.py and simply run the display_file_content(file_path)
-function where file_path is the path of the file. For example, `display_file_content('/your/path/file.example')
+function where file_path is the path of the file. For example, `display_file_content('/your/file.example')
+To display the list of all project files, use the get_available_file_paths() function.
 ```
 
 Note: `ce4ci_dict.py` is the name of the generated file that has been uploaded to the Code Interpreter plugin of ChatGPT. If `/mnt/data` is not included, the file won't be found.
