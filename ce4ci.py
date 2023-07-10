@@ -91,6 +91,6 @@ if __name__ == "__main__":
             print(f"Output file {output_file} already exists. It will be overwritten.")
         main(project_dir, output_file)
     else:
-        print("Usage: python create_python_script.py [project_dir] [output_file]")
+        print("Usage: python ce4ci.py [project_dir] [output_file]")
         sys.exit(1)
 
