@@ -1,50 +1,93 @@
 # CodeExplorer4CodeInterpreter
 
-CodeExplorer4CodeInterpreter is a Python script that serves as a Code Explorer for the Code Interpreter plugin of ChatGPT. It provides comprehensive access to the entire project's code, facilitating interaction with the project's code files.
+CodeExplorer4CodeInterpreter is a Python script for developers and researchers who want to explore and interact with a project's code base more efficiently. It is compatible with the Code Interpreter plugin of ChatGPT and provides a seamless way to access and interact with a project's code files.
 
-This Python script creates another Python script that contains all the code of the project from the specified path. To display the contents of a specific file, simply call the `display_file_content(file_path)` function, where `file_path` is the path to the file from the specified path. For example, `display_file_content('/src/main.rs')`.
+This script scans a given project directory and generates a Python script containing all the project's code. This generated script acts as a code dictionary, providing easy access to all the project's code.
 
-## Getting Started
+## Features
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+- CodeExplorer4CodeInterpreter supports Python 3.7 and above, ensuring compatibility with most modern Python environments.
+- Allows easy exploration of a project's code base.
+- Generates a Python script that can be easily imported and used in the ChatGPT Code Interpreter plugin.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
+Before running CodeExplorer4CodeInterpreter, ensure you have the `gitignore_parser` module installed in your Python environment. You can install it using pip:
 
-```
-Python 3.7+
+```bash
+pip install gitignore-parser
 ```
 
-### Installation
+## Getting Started
 
-1. Clone the repository:
-```
+To get started with CodeExplorer4CodeInterpreter, you need to have Python 3.7 or higher installed on your system.
+
+Clone the repository using the following command:
+```bash
 git clone https://github.com/julienwetzel/CodeExplorer4CodeInterpreter.git
 ```
 
-2. Navigate to the cloned repository:
-```
+Navigate to the cloned repository:
+```bash
 cd CodeExplorer4CodeInterpreter
 ```
 
-3. Run the script:
-```
-python ce4ci.py
+To generate the Python script containing your project's code, run the following command:
+```bash
+python ce4ci.py [project_dir] [output_file]
 ```
 
-## Usage
+where `[project_dir]` is the directory of your project and `[output_file]` is the name of the file to be generated.
 
-Once the generated Python file has been added to ChatGPT's code interpreter, add the following text to the end of the ChatGPT prompt: 
+For example:
+```bash
+python ce4ci.py ./ ../../data/ce4ci_dict.py
+```
+
+After running the command, you will see a summary of the operation:
+```bash
+----------------------------------------------------
+Total files processed: 5
+Total directories processed: 0
+Total file contents inserted: 3
+Total files ignored due to .gitignore rules: 2
+Total files skipped because they are not Unicode: 0
+----------------------------------------------------
+```
+## Usage with ChatGPT Code Interpreter Plugin
+
+After the Python script is generated, it can be used with the Code Interpreter plugin of ChatGPT.
+
+In the ChatGPT prompt, add the following text:
 
 ```
 All the contents of the project files are in the attached python file.
-Import the file with `/mnt/data/ce4ci_gen.py` and simply run the `display_file_content(file_path)`
-function where `file_path` is the path of the file. For example, `display_file_content('/your/path/file.example')
+Import the file with /mnt/data/ce4ci_dict.py and simply run the display_file_content(file_path)
+function where file_path is the path of the file. For example, `display_file_content('/your/path/file.example')
 ```
 
-**Note:** If you don't include `/mnt/data`, it won't find the file. In the example, `ce4ci_gen.py` is the name of the generated file that has been uploaded to ChatGPT's code interpreter plugin.
+Note: `ce4ci_dict.py` is the name of the generated file that has been uploaded to the Code Interpreter plugin of ChatGPT. If `/mnt/data` is not included, the file won't be found.
+
+## Exploring the Generated Python Dictionary
+
+To explore the generated Python dictionary, you can use the `ce4ci_print.py` script.
+
+To display the content of the Python dictionary, use:
+```bash
+python ce4ci_print.py [--list] <script_path> [<file_path>]
+```
+For example:
+```bash
+python ce4ci_print.py ../../data/ce4ci_dict.py '/LICENSE'
+```
+This will display the contents of the LICENSE file.
+
+To list the paths of all files contained in the dictionary, use:
+```bash
+python ce4ci_print.py ../../data/ce4ci_dict.py --list
+```
+This will display all the available file paths.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md) file for details.
