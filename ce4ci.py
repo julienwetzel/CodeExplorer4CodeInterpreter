@@ -66,7 +66,9 @@ def main(project_dir: Path, output_file: Path):
         py_file.write("}\n\n")
         
         py_file.write("def display_file_content(file_path):\n")
-        py_file.write("    print(file_contents[file_path])\n")
+        py_file.write("    print(file_contents[file_path])\n\n")
+        py_file.write("def get_available_file_paths():\n")
+        py_file.write("    return list(file_contents.keys())\n")
 
     # Print statistics
     print(f"----------------------------------------------------")
