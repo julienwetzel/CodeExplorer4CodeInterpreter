@@ -4,6 +4,11 @@ CodeExplorer4CodeInterpreter is a Python script for developers and researchers w
 
 This script scans a given project directory and generates a Python script containing all the project's code. This generated script acts as a code dictionary, providing easy access to all the project's code.
 
+<div style="display:flex;">
+  <img src="https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/assets/1897591/3f675698-96fd-45d3-96fb-b2033411ebd1" alt="Image 1" width="50%">
+  <img src="https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/assets/1897591/9444f225-31ed-4b2a-b1ba-d61161a2087a" alt="Image 2" width="50%">
+</div>
+
 ## Features
 
 - CodeExplorer4CodeInterpreter supports Python 3.7 and above, ensuring compatibility with most modern Python environments.
@@ -92,3 +97,4 @@ This will display all the available file paths.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md) file for details.
+
