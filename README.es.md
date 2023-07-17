@@ -107,4 +107,4 @@ Esto mostrará todas las rutas de archivos disponibles.
 
 ## Licencia
 
-Este proyecto está licenciado bajo MIT - ve el archivo [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md) para más detalles.
+Este proyecto está licenciado bajo MIT - ve el archivo [LICENSE](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE) para más detalles.
