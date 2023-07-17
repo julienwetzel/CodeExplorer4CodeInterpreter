@@ -107,4 +107,4 @@ Cela affichera tous les chemins de fichiers disponibles.
 
 ## Licence
 
-Ce projet est sous licence MIT - consultez le fichier [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md) pour plus de détails.
+Ce projet est sous licence MIT - consultez le fichier [LICENSE](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE) pour plus de détails.
