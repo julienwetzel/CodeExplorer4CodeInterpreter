@@ -107,4 +107,4 @@ This will display all available file paths.
 
 ## License
 
-This project is licensed under MIT - see the [LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE) file for more details.
+This project is licensed under MIT - see the [LICENSE](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE) file for more details.
