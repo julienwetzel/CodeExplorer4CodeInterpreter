@@ -107,4 +107,4 @@ python ce4ci_print.py ../../data/ce4ci_dict.py --list
 
 ## 许可
 
-该项目采用MIT许可 - 查看[LICENSE.md](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE.md)文件以获取更多详情。
+该项目采用MIT许可 - 查看[LICENSE](https://github.com/julienwetzel/CodeExplorer4CodeInterpreter/blob/main/LICENSE)文件以获取更多详情。
